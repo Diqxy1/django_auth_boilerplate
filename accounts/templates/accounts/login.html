@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+
+        <div>
+            {% render_field form.username placeholder=form.username.label %}
+        </div>
+
+        <div>
+            {% render_field form.password placeholder=form.password.label %}
+        </div>
+
+        <button type="submit">
+            Acessar
+        </button>
+    </form>
+</body>
+</html>
